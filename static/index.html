@@ -1,0 +1,137 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RentPRO</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="RentPRO">
+  <meta property="og:type" content="website">
+
+<style>
+body {
+    background-image:url("images/bkgnd.jpg");
+    height: 100%;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1{
+letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #ffffff;
+  
+th, td, p, input {
+            font:14px Verdana;
+        }
+table, th, td 
+{
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+th {
+    font-weight:bold;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container my-5">
+    <div>
+    <form id="add_customer">
+    	<h1>Add Customer</h1>
+    	<div class="field">
+    		<label for="name">Name :</label>
+    		<input type="text" id="name" name="name" placeholder="Enter your fullname" />
+    		<small></small>
+    	</div>
+    	<div class="field">
+    		<label for="phone">Ph No :</label>
+    		<input type="text" id="phone" name="phone" placeholder="Enter your phone number" />
+    		<small></small>
+    	</div>
+    	<div class="field">
+    		<label for="email">Email :</label>
+    		<input type="text" id="email" name="email" placeholder="Enter your email address" />
+    		<small></small>
+    	</div>
+    	<button type="submit">Submit</button>
+    </form>
+    
+    
+    <form id="add_rental">
+    	<h1>New Rental</h1>
+    	<div class="field">
+    		<label for="name">Name :</label>
+    		
+    		<select id="rent_name" name="name">
+    		</select>
+    		<small></small>
+    	</div>
+    	<div class="field">
+    		<label for="rent_date">Rent Date:</label>
+    		<input type="text" id="rent_date" name="rent_date" placeholder="DD-MM-YYYY" />
+    		<small></small>
+    	</div>
+    	<div class="field">
+    		<label for="return_date">Return Date:</label>
+    		<input type="text" id="return_date" name="return_date" placeholder="DD-MM-YYYY" />
+    		<small></small>
+    	</div>
+    	<div class="field">
+    		<label for="vehicle">Vehicle:</label>
+    		
+    		<select id="vehicle" name="vehicle">
+              <option value="Bike">Bike</option>
+              <option value="Cycle">Cycle</option>
+              <option value="Car">Car</option>
+              <option value="Boat">Boat</option>
+            </select>
+    		<small></small>
+    	</div>
+    	<div class="field">
+    		<label for="owner_id">Owner ID:</label>
+    		<input type="text" id="owner_id" name="owner_id"/>
+    		<small></small>
+    	</div>
+    	<button type="submit">Submit</button>
+    	<div id="resultRent">    	</div>
+    </form>
+    <br>
+    <div>
+    <input type="button" onclick="showCust()" value="Show Customers" />
+    <input type="button" onclick="showRent()" value="Show Rentals" />
+    <input type="button" onclick="showInv()" value="Show Inventory" />
+    <p id="showData" class="card"></p>
+    </div>
+    
+    
+    
+    
+    </div>
+ </div> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+
